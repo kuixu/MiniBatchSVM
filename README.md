@@ -18,8 +18,6 @@ You can use it to train your own data by specific the options
   -h, --help            show this help message and exit
   -m MODEL, --model=MODEL
                         svm, log
-  -l, --labelstart1     use this option when  the label of your data is bengin
-                        at 1
   -t TRAINLIST, --trainlist=TRAINLIST
                         trainlist file
   -T TESTLIST, --testlist=TESTLIST
@@ -31,7 +29,9 @@ You can use it to train your own data by specific the options
   -c NCLASSES, --nclasses=NCLASSES
                         num of the class
   -n, --norm            do mean normalization
-
+  -l, --labelstart1     use this option when  the label of your data is bengin
+                        at 1
+                        
 ```
 
 ## SVM
