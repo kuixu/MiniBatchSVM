@@ -142,6 +142,6 @@ if __name__ == "__main__":
                 best_score = score
         #print(("   Batch %s/%s  Score %.3f BestScore %.3f")  %( j, batchCount, score, best_score))
         print(("   Test Score %.4f BestScore %.4f")  %( score, best_score))
-
+    print(("Finished, The finally best score is: %.4f") %(best_score) )
 
 
