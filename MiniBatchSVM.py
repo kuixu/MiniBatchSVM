@@ -40,12 +40,12 @@ def loadH5file(filepath, opt):
         X_train=np.asarray(train['data'])
         if opt.norm:
             X_train, ind =meanNorm(X_train)
-            print X_train.shape, len(ind)
+            #print X_train.shape, len(ind)
             # remove fully zore samples 
             for i in range(len(ind)-1 ,-1,-1):
                 X_train = np.delete(X_train,ind[i],0)
 
-        print X_train.shape
+        #print X_train.shape
         y_train=y_train.reshape(y_train.shape[0])
         vectorNum = 1
         for i in range(1,len(X_train.shape)):
@@ -101,9 +101,6 @@ if __name__ == "__main__":
     optParser.add_option("-m", "--model", 
             action = "store", type = 'string', dest = "model", default = "svm", 
             help = "svm, log")
-    optParser.add_option("-l", "--labelstart1", 
-            action = "store_false", dest = "labelstart1", default = False, 
-            help = "use this option when  the label of your data is bengin at 1 ")
     optParser.add_option("-t", "--trainlist", action = "store", type = 'string', \
             dest = "trainlist", default = "data/mnist-h5/train.list", help = "trainlist file")
     optParser.add_option("-T", "--testlist", action = "store", type = 'string', \
@@ -117,6 +114,9 @@ if __name__ == "__main__":
     optParser.add_option("-n", "--norm", 
             action = "store_true", dest = "norm", default = False, 
             help = "do mean normalization")
+    optParser.add_option("-l", "--labelstart1", 
+            action = "store_false", dest = "labelstart1", default = False, 
+            help = "use this option when  the label of your data is bengin at 1 ")
 
     (opt, args) = optParser.parse_args()
 
