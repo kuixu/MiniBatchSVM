@@ -6,8 +6,9 @@ Mini-batch SVM / Logistic Regresion, Online SVM training for large scale data
 ```
 ./MiniBatchSVM.py 
 ```
-By default: run mnist with batchsize=1000, epoch=20
-You can use it to train your own data by specific the options
+By default: run mnist with batchsize=1000, epoch=20.
+
+You can train your own data by specific the options
 
 ```
 ./MiniBatchSVM.py [options] [--trianlist path-to-training-data-list-file] 
